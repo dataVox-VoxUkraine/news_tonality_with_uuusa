@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<operations>
+
+  	<operation>
+	<form>SENTIDATA_BOOSTER</form>
+	<postag>*</postag>
+	<dependency>advmod,amod,nmod,obl</dependency>
+	<type>WEIGHT(SENTIDATA,DEST,acomp)</type>
+	<levelsup>1</levelsup>
+	<priority>3</priority>
+	<validhead>*</validhead>
+	</operation>
+	
+
+	<operation>
+	<form>но</form>
+	<postag>CONJ</postag>
+	<dependency>cc</dependency>
+	<type>WEIGHTING(-0.25,SUBJL)</type>
+	<levelsup>1</levelsup>
+	<priority>1</priority>
+	<validhead>*</validhead>
+	</operation> 
+	 
+
+ 	<operation>
+	<form>SENTIDATA_NEGATION</form>
+	<postag>*</postag>
+	<dependency>*</dependency>
+	<type>SHIFT(2,DEST,attr,acomp,SUBJR,CHILDREN)</type>
+	<levelsup>1</levelsup>
+	<priority>2</priority>
+	<validhead>*</validhead>
+	</operation> 
+
+	
+ 
+	<operation>
+	<form>если</form>
+	<postag>*</postag>
+	<dependency>mark</dependency>
+	<type>WEIGHTING(-1,DEST,SUBJR)</type>
+	<levelsup>1</levelsup>
+	<priority>3</priority>
+	<validhead>*</validhead>
+	</operation>	 
+	
+
+	
+</operations>
