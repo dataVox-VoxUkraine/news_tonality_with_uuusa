@@ -27,7 +27,7 @@
 	<form>SENTIDATA_NEGATION</form>
 	<postag>*</postag>
 	<dependency>*</dependency>
-	<type>SHIFT(2,DEST,attr,acomp,SUBJR,CHILDREN)</type>
+	<type>SHIFT(2,SUBJR,DEST,CHILDREN)</type>
 	<levelsup>1</levelsup>
 	<priority>2</priority>
 	<validhead>*</validhead>
